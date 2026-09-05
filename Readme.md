@@ -30,3 +30,5 @@ Jonathans Stefane Irene
 4. Connect a local repository to GitHub.
 5. Push and pull project changes.
 
+## GITHUB WORK
+I am not so sure if this is right
