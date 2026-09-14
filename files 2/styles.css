@@ -1,0 +1,231 @@
+/* =====================================================
+   Forbes Cosmetics - styles.css
+   Mobile-first CSS. Base styles are for small screens.
+   The media query at the bottom adjusts the layout for
+   wider (desktop) screens.
+   ===================================================== */
+
+/* ---- Basic reset ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Typography ---- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2b1620;
+  background-color: #fbf6f2;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: #7a2138;
+}
+
+a:hover {
+  color: #a8324a;
+}
+
+/* Keep keyboard focus visible for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #b98b4e;
+  outline-offset: 2px;
+}
+
+/* ---- Header and navigation (mobile first: stacked) ---- */
+header {
+  background-color: #2e0e1a;
+  color: #f4e9e2;
+  padding: 15px;
+}
+
+header h1 {
+  color: #f4e9e2;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header nav a {
+  display: block;
+  color: #f4e9e2;
+  text-decoration: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(244, 233, 226, 0.2);
+}
+
+/* ---- Main content ---- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Groups of cards: single column on mobile, row on desktop */
+.article-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-group article {
+  border-top: 1px solid #e6d9d0;
+  padding-top: 15px;
+}
+
+aside {
+  background-color: #ffffff;
+  border-left: 4px solid #b98b4e;
+  padding: 15px 20px;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---- Forms ---- */
+form {
+  background-color: #ffffff;
+  border: 1px solid #e6d9d0;
+  padding: 20px;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 8px;
+  border: 1px solid #b9a89c;
+  border-radius: 3px;
+}
+
+button {
+  font: inherit;
+  background-color: #7a2138;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a8324a;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: #2e0e1a;
+  color: #f4e9e2;
+  padding: 20px 15px;
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer nav a {
+  color: #f4e9e2;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #b98b4e;
+}
+
+/* =====================================================
+   Wider screens (tablet / desktop)
+   ===================================================== */
+@media (min-width: 768px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+  }
+
+  header h1 {
+    margin-bottom: 0;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  header nav a {
+    border-top: none;
+    padding: 5px 0;
+  }
+
+  main {
+    padding: 30px 40px;
+  }
+
+  .article-group {
+    flex-direction: row;
+  }
+
+  .article-group article {
+    flex: 1;
+    border-top: none;
+    border-left: 3px solid #b98b4e;
+    padding: 0 0 0 15px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+  }
+}
